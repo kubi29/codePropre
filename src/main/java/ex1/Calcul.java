@@ -1,6 +1,6 @@
 package ex1;
 
-public class calcul {
+public class Calcul {
 
 	public int get1(int a, int b){
 		return a+b;
