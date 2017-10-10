@@ -4,15 +4,57 @@ import java.util.Date;
 
 public class Entreprise {
 
-	public int Siret;
-	public String Nom;
-	public String adresse;
-	public Date date_Creation;
+	/** Siret : int  */
+	private int siret;
+	/** Nom : String  */
+	private String nom;
+	/** adresse : String  */
+	private String adresse;
+	/** date_Creation : Date  */
+	private Date dateCreation;
 	
-	public static final int capitalMax = 3000000;
+	/** CAPITAL_MAX : représente le montant max d'un capital d'entreprise  */
+	public static final int CAPITAL_MAX = 3000000;
 	
-	public void Afficher_statut(){
-		
+	/*
+	 * Affiche le statut
+	 */
+	public void afficherStatut(){
+		//TODO implémentation a venir
 	}
+
+	public int getSiret() {
+		return siret;
+	}
+
+	public void setSiret(int siret) {
+		this.siret = siret;
+	}
+
+	public String getNom() {
+		return nom;
+	}
+
+	public void setNom(String nom) {
+		this.nom = nom;
+	}
+
+	public String getAdresse() {
+		return adresse;
+	}
+
+	public void setAdresse(String adresse) {
+		this.adresse = adresse;
+	}
+
+	public Date getDateCreation() {
+		return dateCreation;
+	}
+
+	public void setDateCreation(Date dateCreation) {
+		this.dateCreation = dateCreation;
+	}
+	
+	
 	
 }
