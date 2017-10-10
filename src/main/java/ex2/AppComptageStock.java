@@ -18,11 +18,6 @@ public class AppComptageStock {
 		
 		comptageStock.ajouterElement(25);
 		comptageStock.afficheStatutComptage(TypesComptage.MOYENNE);
-		 
-		
-		
-		
-		
 		
 		
 	}
