@@ -7,30 +7,40 @@ public class Zoo {
 	private ZoneCarnivore zoneCarnivore;
 	private FermeReptile fermeReptile;
 	private Aquarium aquarium;
+	private Zone zone;
 	
 	public Zoo(String nom){
 		this.nom = nom;
+		
+		this.zoneCarnivore = new ZoneCarnivore();
+		this.savaneAfricaine = new SavaneAfricaine();
+		this.fermeReptile = new FermeReptile();
+		this.aquarium = new Aquarium();
+		
 	}
 	
-	public void addAnimal(String nomAnimal, String typeAnimal, String comportement){
-		if (typeAnimal.equals("MAMMIFERE") && comportement.equals("CARNIVORE")){
-			zoneCarnivore.addAnimal(typeAnimal, nomAnimal, comportement);
+	public void addAnimal(Animal animal){
+		if (animal.getTypes().equals("MAMMIFERE") && animal.getComportements().equals("CARNIVORE")){
+			zoneCarnivore.addAnimal(animal);
 		}
-		else if (typeAnimal.equals("MAMMIFERE") && comportement.equals("HERBIVORE")){
-			savaneAfricaine.addAnimal(typeAnimal, nomAnimal, comportement);
+		else if (animal.getTypes().equals("MAMMIFERE") && animal.getComportements().equals("HERBIVORE")){
+			savaneAfricaine.addAnimal(animal);
 		}
-		else if (typeAnimal.equals("REPTILE")){
-			fermeReptile.addAnimal(typeAnimal, nomAnimal, comportement);
+		else if (animal.getTypes().equals("REPTILE")){
+			fermeReptile.addAnimal(animal);
 		}
-		else if (typeAnimal.equals("POISSON")){
-			aquarium.addAnimal(typeAnimal, nomAnimal, comportement);
+		else if (animal.getTypes().equals("POISSON")){
+			aquarium.addAnimal(animal);
 		}
 	}
 	
 	public void afficherListeAnimaux(){
 		savaneAfricaine.afficherListeAnimaux();
+
 		zoneCarnivore.afficherListeAnimaux();
+
 		fermeReptile.afficherListeAnimaux();
+
 		aquarium.afficherListeAnimaux();
 	}
 
